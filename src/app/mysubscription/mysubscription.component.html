@@ -1,0 +1,13 @@
+<div class="routerwrapper">
+<div class="stackwrapper">
+  <a *ngFor="let data of datas" [routerLink]="['/user', uid, 'mysubscription', 'subscriptionview', data.package_id, uid]" routerLinkActive ="active">
+
+<div class="stackblock" >
+            {{data.package_name}}
+
+
+  </div>
+  </a>
+  </div>
+  <router-outlet></router-outlet>
+  </div>

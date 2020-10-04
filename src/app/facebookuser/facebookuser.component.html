@@ -1,0 +1,132 @@
+
+
+      <div class="profilewrapper">
+
+
+
+
+
+          <div class="loginheader">
+            Sorry, We just need you to register more profile info !!!
+            </div>
+
+              <form novalidate [formGroup]="registerform" >
+                <div class="bodywrapper">
+            <div class="picture">
+            <img src="{{userphotoURL}}">
+          </div>
+                  <div class="detailsblock">
+                                        <label for="customerornnot" class="label">
+                                          You are Registering as
+                                        </label>
+                                        <select class="details" id="customerornnot"
+                                        formControlName="customerornot"
+                                        [ngClass]="{'invalid': errormessage.customerornot}"
+                                        name="customerornot">
+                                      <option value="customer"> Customer </option>
+                                        <option value="collector"> Collector </option>
+                                      </select>
+                                        <span class="errormessage">{{errormessage.customerornot}}</span>
+                                        </div>
+
+                <div class="detailsblock">
+                  <label class="label"  for="fullname">Full Name</label>
+                  <input class="details" type ="text" id="fullname"  formControlName="fullname"
+                  [ngClass]="{'invalid': errormessage.fullname}"
+                  placeholder="Full Name"
+                  >
+                  <span class="errormessage">{{errormessage.fullname}}</span>
+                </div>
+
+
+                <div class="detailsblock">
+                <label for="address" class="label">
+                Address
+                </label>
+                <input type="text" class="details" id="address" name="address"
+                formControlName ="address" [ngClass]="{'invalid': errormessage.address}">
+
+                <span class ="errormessage">{{errormessage.address}}</span>
+                </div>
+
+                <div class="detailsblock">
+                                      <label for="companyornot" class="label">
+                                        You are Registering as
+                                      </label>
+                                      <select class="details" id="companyornot"
+                                      formControlName="companyornot"
+                                      [ngClass]="{'invalid': errormessage.companyornot}"
+                                      name="companyornot">
+                                    <option value="company"> A Company </option>
+                                      <option value="company"> An Individual </option>
+                                    </select>
+                                      <span class="errormessage">{{errormessage.companyornot}}</span>
+                                      </div>
+
+                                      <div class="detailsblock">
+                                      <label for="phonenumber" class="label">
+                                      Phone Number
+                                      </label>
+                                      <input type="text" class="details" id="phonenumber" name="phonenumber"
+                                      formControlName ="phonenumber" [ngClass]="{'invalid': errormessage.phonenumber}">
+
+                                      <span class ="errormessage">{{errormessage.phonenumber}}</span>
+                                      </div>
+
+                <div class="detailsblock">
+                  <label class="label"  for="email">Email</label>
+                  <input class = "details"type ="email" id="email" formControlName="email"
+                  [ngClass]="{'invalid': errormessage.email}"
+                  placeholder="email"
+                  >
+                  <span class="errormessage">{{errormessage.email}}</span>
+                </div>
+
+
+            <div class="detailsblock">
+
+            <label class="label"  for="location">Location</label>
+              <select id="location" formControlName="location"
+              [ngClass]="{'invalid': errormessage.location}">
+
+              <option *ngFor="let location of locations" value="{{location}}">{{location}}</option>
+
+            </select>
+              <span class="errormessage">{{errormessage.location}}</span>
+            </div>
+
+
+          <!-- <div class="uploadidcard" id="idcardupload">
+            <div class="detailsblock">
+              <label class="label"  for="uploadidcard">Upload an I.D. card</label>
+              <input class = "details"type ="file" id="pictureidcard" name="idcard" formenctype="multipart/form-data" >
+              <div class="uploadpicture">
+                <button onclick="uploading('idcard');">upload I.D.Card</button>
+                </div>
+              <div class="loading" id="loadingidcard">
+                <div class="filling" id="fillingidcard">
+                </div>
+              </div>
+              <div style="display:none;" id="uploadidcardmessage">
+                </div>
+                <div  id="uploadidcarderrormessage">
+                  </div>
+            </div>
+
+          </div> -->
+
+                <div class="submitdiv">
+                  <input type ="submit" class="button" (click)="save();" id="submit" [disabled]="!registerform.valid" value="Submit" id="submit">
+
+                </div>
+
+
+
+
+
+
+              </div>
+            </form>
+
+
+      </div>

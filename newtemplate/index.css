@@ -1,0 +1,110 @@
+body{
+  margin: 0;
+  padding: 0;
+  outline:0;
+}
+.indexwrapper{
+  background-image: url(bg.jpg);
+  margin-top: 0px;
+  width:100vw;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  /* TO Change to flex start in reg form*/
+  align-items: flex-start;
+  /* */
+
+  /* to change */
+min-height: 100vh;
+overflow: hidden;
+}
+.loginwrapper{
+  margin-top: 20px;
+  border: 2px solid green;
+  background-color: transparent;
+  height: fit-content;
+
+
+}
+.loginheader{
+  background-color: green;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+.loginbody{
+  display: flex;
+
+  justify-content: center;
+  margin-top: 15px;
+  padding:0px 20px;
+}
+.input{
+  margin-bottom: 19px;
+
+}
+.input input{
+  width: 200px;
+  margin-left: 15px;
+  font-size: 16px;
+  padding: 7px;
+  padding-left: 50px;
+  background-image: url(searchicon.png);
+  background-position: 10px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border:  2px solid #73ec05;
+  border-radius: 20px;
+  color:  #73ec05;
+}
+.input input:focus{
+  outline: 0;
+  border: 1px solid #c7faa7;
+
+}
+.input label{
+  margin-right: 20px;
+    color: #a6ca17;
+    display: block;
+    margin-bottom: 8px;
+    margin-left: 15px;
+      text-align: center;
+  
+}
+input[type=submit]{
+  background-image: url();
+  width:100px;
+  background-color: #164a45;
+    border: none;
+    padding-left: 5px;
+
+}
+.orregister{
+  margin-left: 50px;
+    color: #a6ca17;
+}
+.orregister a{
+  color: #a6ca17;
+}
+@media only screen and (min-width:1000px ){
+  .input label{
+    display: inline-block;
+    margin-bottom: 0px;
+    margin-left:0;
+    text-align: left;
+    width: 70px;
+  }
+  .input{
+    margin-bottom: 30px;
+  }
+  .indexwrapper{
+    /* TO Change to flex start in reg form*/
+    align-items: center;
+    /* */
+
+  }
+}

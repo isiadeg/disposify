@@ -1,0 +1,31 @@
+preload  - all this;
+{
+inst: fin inst,
+amnt : all amount ,
+
+}
+
+type - deposit
+
+fin institution - loaded from backend
+amount  customer wants in his bank acct
+amount to collect from customer
+ go to amount remaining  in hand, add  it
+
+ Profit  = amount collected from customer - (amount transferred to customer acct + bank charges)
+ go to remaining amount in bank subtract (amount transferred to customer acct + bank charges)
+ go to  user/day/expenditure add expenditure
+  go to  user/day/income add income
+bound= search for type , add object.keys into array, map to look for condition, then get charges
+ bank charges - go to fininst/name/type/bound/charges
+
+ back end - do above and save transaction as users/day/time/{time, type,
+amnt collected from customer, total cost incurred, profit }
+
+withdrawal -
+diff
+ go to amount remaining  in hand, subtract  it from (amount given to customer)
+ go remaining amount in bank, subtract  bank charges, add amount collected from custom
+
+ daily report after remiting
+ user/day/hand{op bal, total expenditure, total income, last amnt to remit, amnt  to remit}

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="/">
+<meta charset="utf-8">
+<title>DISPOSIFY</title>
+<link href="newsdesign.css" rel="stylesheet" type="text/css">
+<meta name="keyword" content="Dispose Household waste, Dispose Company Waste, Dispose Household Waste, Subscribe to Waste Collectors, Order Waste Collectors" >
+<meta name="description" content="Subscribe to Verified Waste Collectors or Register Your Waste Collector Service To Get Customers">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:url"           content="https://sdgdisposify.web.app" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Dispose your Waste" />
+  <meta property="og:description"   content="Whether it is household waste or company waste, Disposify makes their disposal easy by bringing you close to verified waste collectors " />
+  <meta property="og:image"         content="https://sdgdisposify.web.app/assets/disposify.jpg"  />
+  <meta property="og:image:width"          content="600px" />
+    <meta property="og:image:height"          content="600px" />
+
+
+<link rel="manifest" href="/assets/manifest.json">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cantarell" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cantarell" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT Sans" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<style>
+body{
+
+font-size: 100%;
+margin: 0;
+padding:0;
+outline: 0;
+
+}
+
+td, th{
+ border: 2px solid #bbb;
+ border-collapse: collapse;
+}
+
+td img{
+max-width: 50%;
+height: auto;
+
+}
+th, td{
+ padding: 10px;
+ text-align: center;
+}
+</style>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '344569333015691',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v3.2'
+    });
+  };
+
+  (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+</script>
+
+</head>
+
+<body>
+
+
+<app-root></app-root>
+<script src="/assets/jquery.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+   https://firebase.google.com/docs/web/setup#available-libraries  -->
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-storage.js"></script><!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-database.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+<script>
+
+<!--  The core Firebase JS SDK is always required and must be listed first -->
+
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+      apiKey: "AIzaSyCxO-zbB4Kxr-xysON9p0WSZyuxIgsnOdw",
+      authDomain: "sdgdisposify.firebaseapp.com",
+      databaseURL: "https://sdgdisposify.firebaseio.com",
+      projectId: "sdgdisposify",
+      storageBucket: "sdgdisposify.appspot.com",
+      messagingSenderId: "467862733031",
+      appId: "1:467862733031:web:58d66e84047d1339606242",
+      measurementId: "G-C7P2DGENT2"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+
+
+
+
+    displaysmall=()=>{
+      $('.togglesearch').toggleClass("togglesearch");
+      $('header').find('.fa-search').css("display", "none");
+      $('.togglesearch').toggleClass("togglesearch");
+    }
+    closesmall=()=>{
+      $('.close').toggleClass("togglesearch");
+        $('.flexdisplay').toggleClass("togglesearch");
+      $('header').find('.fa-search').css("display", "block");
+    }
+    expand =()=>{
+
+    document.getElementById("dropdown-wrapper").style.display="block";
+     document.getElementById("main-news").className += " shift";
+    }
+    closedropdowntele=()=>{
+    document.getElementById("dropdown-wrapper").style.display="none";
+    document.getElementById("main-news").className ="main-news";
+    }
+
+    const uploading = async (idornot)=>{
+      var storagi = firebase.storage();
+      var storageRef = storagi.ref();
+      let tofile = document.getElementById("picture"+idornot);
+document.getElementById("upload"+idornot+"message").innerHTML="";
+console.log(tofile.files.length);
+
+  for (i=0; i<tofile.files.length; i++){
+console.log("uploading "+i);
+let file = tofile.files[i];
+
+    // Create the file metadata
+    var metadata = {
+      contentType: 'image/jpeg'
+    };
+
+    // Upload file and metadata to the object 'images/mountains.jpg'
+
+    let uploadall = $('#'+idornot+'upload');
+    uploadall.toggleClass('uploadblurr');
+    let loading = document.getElementById("loading"+idornot);
+    loading.style.display="block";
+    console.log(firebase.storage.TaskState.RUNNING);
+    // Listen for state changes, errors, and completion of the upload.
+     await storageRef.child('users/'+idornot+"/"+file.name).put(file, metadata).on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
+      function(snapshot) {
+        // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+        var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        console.log('Upload is ' + progress + '% done');
+
+        let filling = document.getElementById("filling"+idornot);
+        filling.style.width=progress+"%";
+        switch (snapshot.state) {
+          case firebase.storage.TaskState.PAUSED: // or 'paused'
+            console.log('Upload is paused');
+            break;
+          case firebase.storage.TaskState.RUNNING: // or 'running'
+            console.log('Upload is running');
+            break;
+        }
+      }, function(error) {
+
+      // A full list of error codes is available at
+      // https://firebase.google.com/docs/storage/web/handle-errors
+      switch (error.code) {
+        case 'storage/unauthorized':
+          // User doesn't have permission to access the object
+          document.getElementById("upload"+idornot+"errormessage").innerHTML="<span style='color:red;'>unauthorized</span>"
+          break;
+
+        case 'storage/canceled':
+          // User canceled the upload
+          break;
+
+
+
+        case 'storage/unknown':
+          // Unknown error occurred, inspect error.serverResponse
+          document.getElementById("upload"+idornot+"errormessage").innerHTML="<span style='color:red;'>unknown error</span>"
+
+          break;
+      }
+    },  function() {
+      // Upload completed successfully, now we can get the download URL
+      setTimeout(async function(){
+      await storageRef.child('users/'+idornot+"/"+file.name).put(file, metadata).snapshot.ref.getDownloadURL().then(function(downloadURL) {
+var listnames = storageRef.child('users/'+idornot).listAll();
+console.log(listnames);
+        console.log('File available at', downloadURL);
+        let loading = document.getElementById("loading"+idornot);
+        loading.style.display="none";
+        let uploadall = $('#'+idornot+'upload');
+        uploadall.toggleClass('uploadblurr');
+        document.getElementById("upload"+idornot+"errormessage").innerHTML="<span style='color:green;'>Upload successfull</span>"
+        if(tofile.files.length > 1){
+          if(i == tofile.files.length-1){
+            document.getElementById("upload"+idornot+"message").innerHTML += downloadURL;
+
+          }else{
+            document.getElementById("upload"+idornot+"message").innerHTML += downloadURL+",";
+
+          }
+        }else{
+        document.getElementById("upload"+idornot+"message").innerHTML += downloadURL;
+
+      }
+    }), 5000
+    });
+    });}
+    }
+    changeplaceholder=()=>{
+      let determinant = $("#filter").val();
+     console.log(determinant);
+      switch(determinant){
+      case 'date': $("#searchword").attr('type','date');
+      break;
+      case 'keywords':  $("#searchword").attr('placeholder','Enter Your Search Terms');
+    $("#searchword").attr('type','text');
+      break;
+      case 'country':  $("#searchword").attr('placeholder','Enter Your Country');
+    $("#searchword").attr('type','text');
+      break;
+      default: ;
+      break;
+
+
+      }
+      }
+      $( document ).ready(function() {
+          console.log( "ready!" );
+
+
+    })
+    const  closedropdown = ()=>{
+            //let dropdownclass = document.getElementsByClassName('dropdownwrapper')[0].className.includes('display');
+            //if(dropdownclass){dropdown = document.getElementsByClassName('dropdown')[0];
+        //    dropdown.className = dropdown.className.replace(/\bdisplay\b/g, "nodisplay");
+    $('.dropdownwrapper').toggleClass('dropdowndisplay');
+        $('#adminwrapper').toggleClass("shift");
+
+          //}else{
+
+            //}
+            //$('.dropdownwrapper').toggleClass('display');
+          }
+          const expanddropdown = ()=>{
+            $('.dropdownwrapper').toggleClass('dropdowndisplay');
+            $('#adminwrapper').toggleClass("shift");
+          }
+          const expanding = (zero) =>{
+            if(zero == "zero"){zero =0}
+            if(zero == "one"){zero= 1}
+            console.log(0)
+            $('.sectioncontent').toggleClass('display');
+          }
+          a = $('.listsectioncontent')
+    for(i=0; i<a.length; i++){
+      console.log(a[i]);
+          z= a[i].firstChild.data.toString();
+            console.log(z);
+          b= z.length;
+          console.log(b);
+          if(b>10){
+            c = z.substring(20, b);
+            console.log(c);
+            d = z.replace(c, "...");
+            console.log(d);
+            $('.listsectioncontent')[i].firstChild.data=d;
+
+          }}
+
+
+function sharedata(){
+
+	FB.ui({
+		method: 'share',
+ href: 'https://sdgdisposify.web.app',}, function(response){});
+}
+
+FB.Event.subscribe('auth.authResponseChange', checkLoginState);
+function testlogin(){
+
+
+
+      FB.getLoginStatus(function(response) {
+        //statusChangeCallback(response);
+        console.log(response);
+        if(response.status == "connected"){
+          if (response.authResponse) {
+            // User is signed-in Facebook.
+            console.log("first step");
+            var unsubscribe = firebase.auth().onAuthStateChanged(function(firebaseUser) {
+              unsubscribe();
+              console.log(firebaseUser);
+              // Check if we are already signed-in Firebase with the correct user.
+              if (!isUserEqual(response.authResponse, firebaseUser)) {
+                console.log("what is user");
+                // Build Firebase credential with the Facebook auth token.
+                var credential = firebase.auth.FacebookAuthProvider.credential(
+                    response.authResponse.accessToken);
+                    console.log(credential)
+                    //document.getElementById("credential").innerHTML = response.authResponse.accessToken;//JSON.stringify(credential);
+                // Sign in with the credential from the Facebook user.
+                firebase.auth().signInWithCredential(credential).catch(function(error) {
+                  // Handle Errors here.
+                  var errorCode = error.code;
+                  var errorMessage = error.message;
+                  // The email of the user's account used.
+                  var email = error.email;
+                  // The firebase.auth.AuthCredential type that was used.
+                  var credential = error.credential;
+                  // ...
+                });
+              } else {
+                // User is already signed-in Firebase with the correct user.
+              }
+            });
+          }
+        }else{
+          FB.login(function(response){
+// handle the response
+if (response.status == "connected"){
+  FB.api('/me', function(response) {
+    console.log(response);
+        console.log('Successful login for: ' + response.name);
+        if (response.authResponse) {
+          // User is signed-in Facebook.
+          console.log("first step");
+          var unsubscribe = firebase.auth().onAuthStateChanged(function(firebaseUser) {
+            unsubscribe();
+            console.log(firebaseUser);
+            // Check if we are already signed-in Firebase with the correct user.
+
+              console.log("what is user");
+              // Build Firebase credential with the Facebook auth token.
+              var credential = firebase.auth.FacebookAuthProvider.credential(
+                  response.authResponse.accessToken);
+                  console.log(credential)
+                  //document.getElementById("credential").innerHTML = response.authResponse.accessToken;//JSON.stringify(credential);
+              // Sign in with the credential from the Facebook user.
+              firebase.auth().signInWithCredential(credential).catch(function(error) {
+                // Handle Errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                // The email of the user's account used.
+                var email = error.email;
+                // The firebase.auth.AuthCredential type that was used.
+                var credential = error.credential;
+                // ...
+              });
+
+          });
+        }
+
+      });
+}else{
+alert("please, Log in to this website");
+
+}
+}, {scope: 'public_profile,email', return_scopes: true});
+
+
+
+        }
+    });
+
+
+
+  console.log("in login service");}
+
+
+  function checkLoginState(event) {
+  if (event.authResponse) {
+    // User is signed-in Facebook.
+    var unsubscribe = firebase.auth().onAuthStateChanged(function(firebaseUser) {
+      unsubscribe();
+      // Check if we are already signed-in Firebase with the correct user.
+
+        // Build Firebase credential with the Facebook auth token.
+        var credential = firebase.auth.FacebookAuthProvider.credential(
+            event.authResponse.accessToken);
+        // Sign in with the credential from the Facebook user.
+        firebase.auth().signInWithCredential(credential).catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          // The email of the user's account used.
+          var email = error.email;
+          // The firebase.auth.AuthCredential type that was used.
+          var credential = error.credential;
+          // ...
+        });
+
+    });
+  } else {
+    // User is signed-out of Facebook.
+    firebase.auth().signOut();
+  }
+}
+function isUserEqual(facebookAuthResponse, firebaseUser) {
+  if (firebaseUser) {
+    console.log("in here");
+    var providerData = firebaseUser.providerData;
+    for (var i = 0; i < providerData.length; i++) {
+      if (providerData[i].providerId === firebase.auth.FacebookAuthProvider.PROVIDER_ID &&
+          providerData[i].uid === facebookAuthResponse.userID) {
+        // We don't need to re-auth the Firebase connection.
+        return true;
+        console.log(firebaseUser.providerData);
+      }
+    }
+  }
+  return false;
+  console.log("false");
+}
+function signout(){
+  console.log("signing out");
+  firebase.auth().signOut();
+  try{FB.logout(function(response) {
+   // Person is now logged out
+});}catch{
+  console.log("no facebook");
+}
+
+}
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+td img{
+  width: 50px;
+  height: 50px;
+  max-width: none;
+}
+table, th, td{
+  border-collapse: collapse;
+  border: none;
+}
+table{
+  border: 1px solid #eee;
+  margin-left: 15px;
+}
+table tr:nth-child(2n){
+  background-color: #eee;
+}
+table tr:nth-child(2n+1){
+  background-color: #fff;
+}
+table th{
+  background-color: green;
+  color:white;
+}
+
+td:first-child{
+
+
+  background-color: darkgray;
+}
+td:first-child input{
+  background-color: green;
+  color:white;
+}
+th{
+  width: 100px;
+  height: 37px;
+}
+
+@media only screen and (min-width:1000px ){
+  td:first-child, th:first-child{
+    left:;
+    position:static ;
+
+  }
+  table{
+    margin-left: 10px;
+  }
+
+}

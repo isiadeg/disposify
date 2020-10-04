@@ -1,0 +1,161 @@
+
+
+      <div class="profilewrapper">
+        <!-- <div class="profileheader">
+          <div class="navlong">
+            <ul>
+              <li>
+                <a href="#">
+                  Profile
+                </a>
+              </li>
+              <li class="active">
+                <a href="#">
+                  Payment Details
+                </a>
+              </li>
+              <li >
+                <a href="#">
+                  Subscription History
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Settings
+                </a>
+              </li>
+            </ul>
+            </div>
+        </div> -->
+        <div class="bodywrapper">
+          <div class="picture">
+            <img src="{{data.package.serviceimagesurl[0]}}">
+            <div class="contact" >
+              <a href = "{{'mailto: '+data.business.business_email}}">
+              <div class="contactblock">
+
+                  <i class="far fa-envelope"></i>
+
+              </div>
+              </a>
+
+              <a href="{{'tel:'+data.business.business_phonenumber}}">
+              <div class="contactblock">
+
+                  <i class="fas fa-phone"></i>
+
+              </div>
+              </a>
+           </div>
+          </div>
+          <div class="detailsblock">
+            <div class="label">
+              Company Name
+            </div>
+            <div class="details">
+            {{data.business.companyname}}
+            </div>
+            </div>
+
+            <div class="detailsblock">
+              <div class="label">
+                Package Name
+              </div>
+              <div class="details">
+                {{data.package.packagename}}
+              </div>
+              </div>
+
+              <div class="detailsblock">
+                <div class="label">
+                  Package Price (Naira)
+                </div>
+                <div class="details">
+                  {{data.package.packageprice}}
+                </div>
+                </div>
+
+                <div class="detailsblock">
+                  <div class="label">
+                    Package Description
+                  </div>
+                  <div class="details">
+                    {{data.package.packagedescription}}
+                  </div>
+                  </div>
+
+                  <div class="detailsblock">
+                    <div class="label">
+                      Features and Tags
+                    </div>
+                    <div class="details" *ngFor="let feature of data.package.featureses">
+                      {{feature}}
+                    </div>
+                    </div>
+
+
+            <div class="detailsblock">
+              <div class="label">
+                Company Email
+              </div>
+              <div class="details">
+              {{data.business.business_email}}
+              </div>
+              </div>
+
+              <div class="detailsblock">
+                <div class="label">
+                Company  Address
+                </div>
+                <div class="details">
+                  {{data.business.companyaddress}}
+                </div>
+                </div>
+
+                <div class="detailsblock">
+                  <div class="label">
+                    Company Phone Number
+                  </div>
+                  <div class="details">
+                    {{data.business.business_phonenumber}}
+                  </div>
+                  </div>
+
+                  <div class="detailsblock">
+                    <div class="label">
+                      Company Working Hours (Monday To Friday)
+                    </div>
+                    <div class="details">
+                      {{data.business.monday_friday_working_hours}}
+                    </div>
+                    </div>
+
+                    <div class="detailsblock">
+                      <div class="label">
+                        Company Working Hours (Saturday)
+                      </div>
+                      <div class="details">
+                        {{data.business.saturday_working_hours}}
+                      </div>
+                      </div>
+
+                      <div class="detailsblock">
+                        <div class="label">
+                          Company Working Hours (Sunday)
+                        </div>
+                        <div class="details">
+                          {{data.business.sunday_working_hours}}
+                        </div>
+                        </div>
+
+                    <div class="detailsblock">
+                      <div class="label">
+                        Company Operating State
+                      </div>
+                      <div class="details">
+                        {{data.business.state}}
+                      </div>
+                      </div>
+          </div>
+
+        </div>

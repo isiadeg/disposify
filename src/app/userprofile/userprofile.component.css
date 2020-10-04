@@ -1,0 +1,78 @@
+.routewrapper{
+  border: 1px solid lightblue;
+  padding: 10px;
+  width:max-content;
+  /* to remove */
+
+}
+.routerheader{
+  background-color: #f3f4f5;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: -10px;
+    margin-bottom: 20px;
+    height: 40px;
+    font-size: 18px;
+    padding-left: 35px;
+}
+
+.navwrapper{
+  border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 25px;
+    width: 1500px;
+}
+.navdetails{
+  float:left;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.navdetails ul{
+  margin: 0;
+  padding: 0;
+}
+.navdetails ul li{
+  display: inline-block;
+    background-color: white;
+    border-bottom: 1px solid #dee2e6;
+    padding: 15px;
+
+    font-size: 18px;
+
+    /* margin-right: 0px; */
+    /* padding: 0; */
+    margin-bottom: -1px;
+  /* border-color when clicked
+  border: 1px solid #dee2e6;
+      border-bottom: 1px solid white;
+
+  */
+
+}
+.active{
+  color: #333;
+}
+.navdetails ul li:hover{
+  border: 1px solid #dee2e6;
+      border-bottom: 1px solid white;
+}
+.navdetails ul li a{
+  color: blue;
+  text-decoration:none;
+}
+.rightback{
+  float:right;
+  background-color: white;
+  border: none;
+  padding: 15px;
+  font-size: 18px;
+}
+@media only screen and (min-width:1000px ){
+  .navwrapper{
+    width: inherit;
+  }
+}

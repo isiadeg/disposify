@@ -1,0 +1,58 @@
+<div class="detailsblock" style="width: max-content;">
+  <div class="infoheader">
+    Status
+</div>
+<div class="infodetails">
+  Collector
+</div>
+</div>
+
+<div class="detailsblock" style="width: max-content;">
+  <div class="infoheader">
+    Subscribers
+</div>
+<div class="infodetails">
+
+  <table class="userstable">
+    <tr>
+      <th>Call</th>
+      <th>Send Email</th>
+      <th>
+        Avatar
+      </th>
+      <th>
+        Full Name
+      </th>
+      <th>
+        Service Subscribed For
+      </th>
+      <th>
+        Location
+      </th>
+      <th>
+        Address
+      </th>
+      <th>
+        Status
+        </th>
+
+    </tr>
+  <tr *ngFor="let data of datas">
+    <td><a href="{{'tel:'+data.userdetails.phonenumber}}">{{data.userdetails.phonenumber}}</a></td>
+    <td><a href="{{'mailto: '+data.userdetails.email}}">{{data.userdetails.email}}</a></td>
+
+    <td><img [src]="data.userdetails.passporturl"></td>
+    <td>{{data.userdetails.fullname}}</td>
+    <td>{{data.subscription.package_name}}</td>
+    <td>{{data.userdetails.location}}</td>
+    <td>{{data.userdetails.address}}</td>
+    <td>{{data.userdetails.companyornot}}</td>
+
+  </tr>
+
+  </table>
+
+
+
+</div>
+</div>

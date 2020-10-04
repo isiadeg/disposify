@@ -1,0 +1,40 @@
+<table class="userstable">
+  <tr>
+    <th>Approve</th>
+    <th>
+      Avatar
+    </th>
+    <th>
+      First Name
+    </th>
+    <th>
+      Middle Name
+    </th>
+    <th>
+      Last Name
+      </th>
+      <th>
+        Email
+      </th>
+
+    <th>
+      Location
+    </th>
+    <th>
+      I.D.Card
+    </th>
+
+  </tr>
+<tr *ngFor="let data of dataarray">
+  <td><input type="button" value="Approve Reg" (click)="approve(data);"></td>
+  <td><img [src]="data.passporturl"></td>
+  <td>{{data.firstname}}</td>
+  <td>{{data.middlename}}</td>
+  <td>{{data.lastname}}</td>
+  <td>{{data.email}}</td>
+  <td>{{data.location}}</td>
+
+  <td><img [src]="data.idcardurl"></td>
+</tr>
+
+</table>

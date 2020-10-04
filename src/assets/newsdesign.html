@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>News Around The World</title>
+<link href="newsdesign.css" rel="stylesheet" >
+<meta name="keyword" content="Nigerian Latest News, Sports News, Politics, News Articles, World Events" >
+<meta name="description" content="Browse latest news in different categories from all over the world ">
+<meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+<style>
+body{
+
+font-size: 100%;
+margin: 0;
+padding:0;
+outline: 0;
+
+}
+</style>
+</head>
+
+
+<body>
+
+<header>
+
+  <div id="dropdown-wrapper">
+		<div id="control">
+		<div id="close-dropdown">
+		<i class="fas fa-times" onclick="closedropdown()"></i>
+		</div>
+		</div>
+		<nav>
+		<div>
+		<ul>
+		<li>
+		<span class="icon"><img src="nigeria.png" class="icon"></span> <a routerLink="/login" routerLinkActive="active">Nigeria</a>
+		</li>
+		<li>
+		<span class="icon"><img src="world.png" class="icon"></span><a routerLink="/google" routerLinkActive="active">World News</a>
+		</li>
+		<li>
+		<span class="icon"><img src="guardian.png" class="icon"></span><a routerLink="/guardian" routerLinkActive="active">The Guardian News</a>
+		</li>
+		<li>
+			<div id ="encloseddiv">
+				<div class="icon">
+				<i >
+				</i>
+				</div>
+				<div id="verticaldiv>"><a href="#">Sports News </a></div>
+				<!---<div id="side-arrow"><i class="fas fa-arrow"></i></div>-->
+				<div id="dropdown">
+					<ul>
+						<li>
+							<a href="#">ESPN News</a>
+						</li>
+						<li>
+							<a href="#">ESPN News</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</li>
+		</ul>
+		</div>
+		</nav>
+
+
+
+		</div>
+		<div id="menu">
+		<button id="menu-button" onclick="expand()">
+		<span class="bar"></span>
+		<span class="bar"></span>
+		<span class="bar"></span>
+		</button>
+		</div>
+		<div id="logo">
+		<img src="../assets/logo.jpg" />
+		<div id="app-name"> News </div>
+		</div>
+
+		<!-- <app-back></app-back>
+		<div id="back">
+		<img class="fas fa-arrow"></i>
+		</div> -->
+		<div id="search-area">
+      <i class="fas fa-search nobigdisplay" id="togglesearch" onclick="displaysmall();"></i>
+    <div class="flexdisplay togglesearch ">
+      <select name="filter" id="filter" [(ngModel)="filterby"]>
+        <option value="">Filter By </option>
+        <option value="date"> Date </option>
+        <option value="Keywords"> Keywords </option>
+        <option value="source"> News Source </option>
+      </select>
+		<input type="search" placeholder="search" class="searchword" [(ngModel)]="searchword">
+    	</div>
+		</div>
+	</div>
+</header>
+
+
+
+
+
+
+  <div class="main-news" id="main-news">
+
+
+	<div class="newsblock">
+		<div class="words">
+		<div class="mobile-source">
+		Sahara Reporters
+			</div>
+		<div class="title">
+		Stupid Nigerian Government Orders Closure Of Market
+		</div>
+		<div class="sourceandtime">
+			<div class="source">
+			Sahara Reporters
+			</div>
+			<div class="time">
+			5 hours ago
+			</div>
+		</div>
+		</div>
+		<div class="picture">
+			<div class="imghund">
+			<img src="french-fries-isolated-on-black-600w-306014546.jpg">
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+	<div class="newsblock">
+		<div class="words">
+		<div class="mobile-source">
+		Sahara Reporters
+			</div>
+		<div class="title">
+		Stupid Nigerian Government Orders Closure Of Market
+		</div>
+		<div class="sourceandtime">
+			<div class="source">
+			Sahara Reporters
+			</div>
+			<div class="time">
+			5 hours ago
+			</div>
+		</div>
+		</div>
+		<div class="picture">
+			<div class="imghund">
+			<img src="french-fries-isolated-on-black-600w-306014546.jpg">
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+  <div class="newsblock">
+		<div class="words">
+		<div class="mobile-source">
+		Sahara Reporters
+			</div>
+		<div class="title">
+		Stupid Nigerian Government Orders Closure Of Market
+		</div>
+		<div class="sourceandtime">
+			<div class="source">
+			Sahara Reporters
+			</div>
+			<div class="time">
+			5 hours ago
+			</div>
+		</div>
+		</div>
+		<div class="picture">
+			<div class="imghund">
+			<img src="french-fries-isolated-on-black-600w-306014546.jpg">
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+  <div class="newsblock">
+		<div class="words">
+		<div class="mobile-source">
+		Sahara Reporters
+			</div>
+		<div class="title">
+		Stupid Nigerian Government Orders Closure Of Market
+		</div>
+		<div class="sourceandtime">
+			<div class="source">
+			Sahara Reporters
+			</div>
+			<div class="time">
+			5 hours ago
+			</div>
+		</div>
+		</div>
+		<div class="picture">
+			<div class="imghund">
+			<img src="french-fries-isolated-on-black-600w-306014546.jpg">
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <div class="sidetags">
+  </div>
+
+  </div>
+  <script src="jquery.js"></script>
+  <script>
+  displaysmall=()=>{
+    $('.togglesearch').toggleClass("togglesearch");
+    $('header').find('.fa-search').css("display", "none");
+  }
+  expand =()=>{
+
+  document.getElementById("dropdown-wrapper").style.display="block";
+   document.getElementById("main-news").className += " shift";
+  }
+  closedropdown=()=>{
+  document.getElementById("dropdown-wrapper").style.display="none";
+  document.getElementById("main-news").className ="main-news";
+  }
+  </script>
+
+  </body>
+  </html>

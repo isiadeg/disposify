@@ -1,0 +1,236 @@
+body{
+  margin: 0;
+  padding: 0;
+  outline:0;
+}
+.facebookbuttton{
+  outline: 0;
+    box-shadow: 2px 2px 4px 0px rgb(222 220 220);
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 15px 30px;
+    color: green;
+    font-family: 'Hind', sans-serif;
+    background-color: white;
+    border: none;
+    font-size:14px;
+}
+.facebooklogin{
+
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+}
+.small{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    justify-content: flex-start;
+}
+.disposify{
+  font-family: 'Dosis', sans-serif;
+  font-size: 2em;
+  color: green;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.small .seamless{
+  font-size: 14px;
+  font-family: 'Dosis', sans-serif;
+ color: #1ce017;
+ font-style: oblique;
+ font-style: oblique;
+    margin-bottom: 21px;
+    letter-spacing: 0.8px;
+    font-weight: bold;
+text-align: center;
+}
+.wrapper{
+  padding: 30px;
+  box-shadow: 2px 2px 4px 0px rgb(222 220 220);
+
+}
+.loginheader{
+  border-top: 2px solid green;
+
+    display: flex;
+    justify-content: center;
+}
+.loginup{
+  font-family: 'Dosis', sans-serif;
+    color: green;
+    font-size: 16px;
+    margin-top: -14px;
+    width: 65px;
+    height: 30px;
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+}
+.inputlabel, .input{
+  margin-bottom: 15px;
+  display: block;
+
+}
+.inputlabel{
+
+  display: flex;
+  font-size: 16px;
+  justify-content: flex-start;
+  align-items: center;
+    font-family: 'Dosis', sans-serif;
+    font-weight:bold;
+}
+.input{
+  padding: 8px;
+    font-size: 16px;
+    border-radius: 3PX;
+    width: 261px;
+    border: 1px solid #babfc3;
+      font-family: 'Dosis', sans-serif;
+}
+.errormessage{
+  color:red;
+}
+.invalid{
+  border: 2px solid red;
+}
+.collecting{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.input:focus{
+  outline:0;
+  border: none;
+    box-shadow: 2px 2px 4px 0px rgb(222 220 220);
+}
+.inputdiv{
+  display:flex;
+  flex-direction: column;
+
+}
+.submitarea{
+display: flex;
+justify-content: flex-start;
+margin-left: 0px;
+margin-bottom: 10px;
+
+}
+.nodisplay{
+  display:none;
+}
+.display{
+  display: block;
+}
+.boss{
+  position: fixed;
+    left: 10px;
+    top: 0px;
+    z-index: 100000000000;
+    /* width: -webkit-max-content; */
+  padding:10px;
+
+    width: 70vw;
+    color: green;
+    height: 40px;
+    background-color: white;
+    box-shadow: 2px 2px 4px 0px rgb(222 220 220);
+}
+.loading{
+  display: flex;
+  position: fixed;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  background-color: #eeeeee;
+  opacity:0.5;
+align-items:center;
+justify-content: center;
+z-index: 10000px;
+}
+
+.rotate{
+  width:35px;
+  height:35px;
+  border-radius: 50%;
+  border:2px dotted blue;
+  border-top:3px dotted blue;
+
+  border-bottom: 1px dotted blue;
+}
+
+
+.nav{
+  position: fixed;
+  top:0px;
+  left: 0px;
+  background-color: transparent;
+  z-index: 100;
+
+}
+.nav ul{
+  margin:0px;
+  padding: 0px;
+}
+.nav ul li{
+  display: inline-block;
+    /* margin-left: 30px; */
+    padding: 10px;
+    margin-top: 10px;
+    padding-top: 0;
+    border-right: 2px solid #164a45;
+    /* border-left: 2px solid #164a45;*/
+
+}
+.nav ul li a{
+   color:#12de0e;
+   font-weight: bold;
+   text-decoration: none;
+   font-size: 18px;
+}
+.button{
+  outline: 0;
+  border:0;
+  border-radius: 20px;
+  background-color: green;
+  color: white;
+  padding: 10px;
+  padding-right:20px;
+  padding-left: 20px;
+  font-size: 14px;
+
+}
+.submitdiv{
+  display:flex;
+  justify-content: center;
+}
+@media only screen and (min-width:1000px ){
+  .navwrapper{
+    width: inherit;
+  }
+  .inputlabel, .input{
+    float:left;
+    margin-right:20px;
+  }
+  .inputdiv{
+  margin-bottom: 20px;
+  clear:both;
+  flex-direction: row;
+  align-items: center;
+  }
+  .input{
+    width: 400px;
+  }
+  .submitarea{
+    margin-left: 150px;
+  }
+  .inputlabel{
+    width: 200px;
+    justify-content: flex-start;
+  }
+}

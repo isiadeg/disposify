@@ -1,0 +1,70 @@
+	<div id="web_order_form">
+
+
+<div id="choose_package"> CHOOSE PACKAGE
+<div class="package_container" *ngFor="let package of packagess" [class.selected]="package===selectedPackage">
+	<div class="package_chooser_wrapper">
+	<div class="package_picture">
+	<div id="{{'picturecarousel' + package.id}}" class="carousel slide" data-ride="carousel">
+	<ol class="carousel-indicators" >
+	<li data-target="" *ngFor="let picture_indicator of  package.pictureUrl "
+	data-slide-to="0" class='{{active( package.pictureUrl.indexOf(picture))}}'></li>
+	</ol>
+	<div class="carousel-inner">
+	<div *ngFor="let picture of package.pictureUrl"class="{{'carousel-item '+active( package.pictureUrl.indexOf(picture))}}">
+	<img src="{{picture}}" class="w-100 d-block packagepicture">
+	</div>
+	</div>
+
+	<a class="carousel-control-prev" data-slide="previous" href="{{'#picturecarousel' + package.id}}" role="button" data-slide="prev">
+	<span class="inline" style="background-color: black"><span class="carousel-control-prev-icon"></span>
+	</span><span class="sr-only">Previous</span>
+	</a>
+
+	<a class="carousel-control-next" href="{{'#picturecarousel' + package.id}}" role="button" data-slide="next">
+	<span class="inline"  style="background-color: black"><span class="carousel-control-next-icon"></span>
+	</span><span class="sr-only">Next</span>
+	</a>
+	</div>
+	</div>
+	<div class="package_chooser_right" id="{{'package_chooser_right'+package.id}}" >
+	<button class="button" (click)="chosenpackage(package.package_id, package.packageName);"> Subscribe </button>
+	</div>
+	<div class="package_name_center">
+	{{package.packageName+" "+" "+"N"+package.packagePrice}}
+	</div>
+	</div>
+<div class="package_details" id='{{"package"+package.id}}'>
+<div class="package_detail" id='{{"details"+package.id}}'>
+{{""+packageDetails(package.id)}}
+</div>
+<div class='{{"package_details_item "+display(package.packageItems.indexOf(packageItem))}}' *ngFor="let packageItem of package.packageItems"  id='{{"packageItem"+package.id+package.packageItems.indexOf(packageItem)}}' [style]=''>
+<div class="icon_marker">
+<i class="fas fa-check"></i>
+
+</div>
+<div class="package_item_word">
+{{packageItem}}
+</div>
+</div>
+<div class="more" id='{{"more"+package.id}}' (click)="more(package.id);">
+<i class="fas fa-angle-right" id='{{"fas"+package.id}}' ></i>
+</div>
+</div>
+
+</div>
+<div id="previous" (click)="previous();">
+<i></i>
+</div>
+<div id="next" (click)="next();">
+<i></i>
+</div>
+</div>
+</div>
+
+<!--<upload></upload>-->
+
+<div id="paying_description">
+</div>
+<div id="submit">
+</div>

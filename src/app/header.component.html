@@ -1,0 +1,77 @@
+<header>
+
+  <div id="dropdown-wrapper">
+		<div id="control">
+		<div id="close-dropdown">
+		<i class="fas fa-times" onclick="closedropdown()"></i>
+		</div>
+		</div>
+		<nav>
+		<div>
+		<ul>
+		<li>
+		<span class="icon"><img src="/assets/nigeria.png" class="icon"></span> <a routerLink="/login" routerLinkActive="active">Nigeria</a>
+		</li>
+		<li>
+		<span class="icon"><img src="/assets/world.png" class="icon"></span><a routerLink="/google" routerLinkActive="active">World News</a>
+		</li>
+		<li>
+		<span class="icon"><img src="/assets/guardian.png" class="icon"></span><a routerLink="/guardian" routerLinkActive="active">The Guardian News</a>
+		</li>
+		<li>
+			<div id ="encloseddiv">
+				<div class="icon">
+				<i >
+				</i>
+				</div>
+				<div id="verticaldiv>"><a href="#">Sports News </a></div>
+				<!---<div id="side-arrow"><i class="fas fa-arrow"></i></div>-->
+				<div id="dropdown">
+					<ul>
+						<li>
+							<a href="#">ESPN News</a>
+						</li>
+						<li>
+							<a href="#">ESPN News</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</li>
+		</ul>
+		</div>
+		</nav>
+
+
+
+		</div>
+		<div id="menu">
+		<button id="menu-button" onclick="expand()">
+		<span class="bar"></span>
+		<span class="bar"></span>
+		<span class="bar"></span>
+		</button>
+		</div>
+		<div id="logo">
+		<img src="../assets/logo.jpg" />
+		<div id="app-name"> News </div>
+		</div>
+
+		<!-- <app-back></app-back>
+		<div id="back">
+		<img class="fas fa-arrow"></i>
+		</div> -->
+		<div id="search-area">
+      <i class="fas fa-search nobigdisplay" id="togglesearch" onclick="displaysmall();"></i>
+    <div class="flexdisplay togglesearch ">
+      <select name="filter" id="filter" [(ngModel)="filterby"]>
+        <option value="">Filter By </option>
+        <option value="date"> Date </option>
+        <option value="Keywords"> Keywords </option>
+        <option value="source"> News Source </option>
+      </select>
+		<input type="search" placeholder="search" class="searchword" [(ngModel)]="searchword">
+    	</div>
+		</div>
+	</div>
+</header>

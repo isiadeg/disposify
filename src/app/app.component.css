@@ -1,0 +1,48 @@
+.loading{
+  display: flex;
+  position: absolute;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  background-color: #eeeeee;
+  opacity:0.5;
+align-items:center;
+justify-content: center;
+}
+.socialmedia{
+	position: absolute;
+right:7px;
+	top:7px;
+	display: flex;
+	width: 137px;
+	justify-content: flex-end;
+	align-items: center;
+z-index: 10000000;
+}
+.whatsapp, .facebook, .twitter, .youtube{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	margin-left: 15px;
+	background-color: white;
+
+    color: green;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+box-shadow: 2px 2px 4px 0px rgb(222 220 220);
+}
+.whatsapp a:link, .facebook a:link, .twitter a:link, .youtube a:link{
+  color:green;
+  text-decoration: none;
+}
+.rotate{
+  width:35px;
+  height:35px;
+  border-radius: 50%;
+  border:2px dotted green;
+  border-top:3px dotted green;
+
+  border-bottom: 1px dotted blue;
+}

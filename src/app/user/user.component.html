@@ -1,0 +1,31 @@
+<table class="userstable">
+  <tr>
+    <th>Actions</th>
+    <th>
+      Avatar
+    </th>
+    <th>
+    Name
+    </th>
+      <th>
+        Email
+      </th>
+
+    <th>
+      Location
+    </th>
+
+
+  </tr>
+<tr *ngFor="let data of datas">
+  <td><input type="button" value="Actions" (click)="actions(data.uid);"></td>
+  <td><img [src]="data.photoURL"></td>
+  <td>{{data.displayName | nbsp:'-'}}</td>
+
+  <td>{{data.email}}</td>
+  <td>{{data.location}}</td>
+
+
+</tr>
+
+</table>

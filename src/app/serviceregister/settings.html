@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <link href="userprofile.css" rel="stylesheet" type="text/css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+      <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Hind:wght@500&family=Open+Sans+Condensed:wght@300&family=Play&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+      <div class="profilewrapper">
+        <!--<div class="profileheader">
+          <div class="navlong">
+            <ul>
+              <li>
+                <a href="#">
+                  Profile
+                </a>
+              </li>
+              <li class="active">
+                <a href="#">
+                  Payment Details
+                </a>
+              </li>
+              <li >
+                <a href="#">
+                  Subscription History
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Settings
+                </a>
+              </li>
+            </ul>
+            </div>
+        </div> -->
+          <form method ="POST" action = "">
+        <div class="bodywrapper">
+          <!--<div class="picture">
+            <div class="filecenter">
+              <input type="file" >
+            </div>
+            <img src="logo2.jpg">
+            <div>
+              <input type="submit" class="button" value="Update Picture">
+
+            </div>
+          </div> -->
+
+          <div class="detailsblock">
+            <label for="name" class="label">
+              Full Name
+            </label>
+            <input class="details" id="name" name="name" >
+
+
+            </div>
+
+            <div class="detailsblock">
+              <label for="email" class="label">
+                Email
+              </label>
+              <input type="email" class="details" id="email" name = "email">
+
+
+              </div>
+
+              <div class="detailsblock">
+                <label for="address" class="label">
+                Address
+                </label>
+                <input type="text" class="details" id="address" name="address">
+
+
+                </div>
+
+                <div class="detailsblock">
+                  <label for="state" class="label">
+                    state
+                  </label>
+                  <input type="text" class="details" name="state" id="state">
+
+
+                  </div>
+
+                  <div class="detailsblock">
+                    <label for="password"  class="label" >
+                    Password
+                    </label>
+                    <input tye="password" class="details" id="password" name ="password">
+
+
+
+
+                    </div>
+
+                    <div class="detailsblock">
+                      <label for="confirmpassword"   class="label" >
+                      Confirm Password
+                      </label>
+                      <input tye="password" class="details" id="confirmpassword" name="confirmpassword">
+
+
+
+
+                      </div>
+
+                      <div class="detailsblock">
+                        <label for="companyornot" class="label">
+                          You are Registering as
+                        </label>
+                        <select class="details" id="companyornot" name="companyornot">
+                      <option value="company"> A Company </div>
+                        <option value="company"> An Individual </div>
+                      </select>
+                        </div>
+                    <div class="detailsblock">
+                      <label for="uploadpas" class="label">
+                      Upload Passport
+                      </label>
+                      <input type="file" enctype="multipart/form-data" class="details" name="uploadpas" id="uploadpas">
+
+
+                      </div>
+
+
+
+                      <div class="detailsblock" style= "display:none;">
+                        <label for="pictureurl" class="label">
+                          Passport Url
+                        </label>
+                        <input class="details" id="pictureurl" name="pictureurl">
+
+
+                        </div>
+
+
+          </div>
+<div class="submitdiv">
+  <input type="submit" class="button" value="Register">
+</div>
+  </form>
+        </div>
+
+
+    </body>
+  </html>

@@ -1,0 +1,75 @@
+<div class="boss nodisplay" >
+  Logging You in. It might take some seconds. Please wait.....
+  </div>
+      <div class="nav">
+        <ul>
+          <li>
+            <a [routerLink]="['/index']" routerLinkActive ="active">
+  Register</a>
+
+
+          </li>
+          <li>
+            <a [routerLink]="['/login']" routerLinkActive ="active">
+  Login</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="small">
+      <div class="disposify">Disposify</div>
+      <div class="seamless">
+        The Seamless Waste Disposing Management Company
+      </div>
+      <div class="wrapper">
+       <div class="loginheader">
+         <div class="loginup">
+           Login
+           </div>
+         </div>
+         <div class="loginbody">
+           <form novalidate [formGroup]="loginform">
+           <div class="inputdiv">
+      <label for="email" class="inputlabel">Email</label>
+      <input type="email" id="email" class="input"
+      placeholder="Email"
+      [ngClass] = "{'invalid': errormessage.email}"
+      formControlName ="email">
+      <span class="errormessage">{{errormessage.email}}</span>
+      </div>
+
+      <div class="inputdiv">
+ <label for="password" class="inputlabel">Password</label>
+ <input type="password" id="password" class="input"
+ placeholder="Password"
+ [ngClass] ="{'invalid': errormessage.password}"
+ formControlName ="password">
+ <span class="errormessage">{{errormessage.password}}</span>
+ </div>
+ <div class="submitdiv">
+  <input type="submit" [disabled] = "!loginform.valid" class="button" value="Login"
+  (click) = "login();">
+</div>
+ </form>
+ <div class="loginerror errormessage" *ngIf="loginerror">{{loginerror}}</div>
+ <div class="facebooklogin">
+   <button class="facebookbuttton" onclick="testlogin();" (click) = "testlogin();" >
+     <i class="fab fa-facebook-f" style="color:blue;"></i>
+     Login with Facebook
+
+   </button>
+   <div id="credential">
+     </div>
+   </div>
+          </div>
+
+      </div>
+
+      <div class = "collecting">
+        Connecting waste disposers to collectors...
+      </div>
+      </div>
+      <div class="big">
+
+
+        </div>

@@ -1,0 +1,102 @@
+
+
+      <div class="profilewrapper">
+
+
+
+
+
+          <div class="loginheader">
+            Register Your Business Service Packages
+            </div>
+
+              <form novalidate [formGroup]="registerform" >
+                <div class="bodywrapper">
+
+
+
+                <div class="detailsblock">
+                  <label class="label"  for="packagename">Package Name</label>
+                  <input class="details" type ="text" id="packagename"  formControlName="packagename"
+                  [ngClass]="{'invalid': errormessage.packagename}"
+                  placeholder="Package Name"
+                  >
+                  <span class="errormessage">{{errormessage.packagename}}</span>
+                </div>
+
+                <div class="detailsblock">
+                   <label for="packagedescription">Package Description</label>
+                   <textarea name="packagedescription" formControlName="packagedescription"
+                   [ngClass]="{'invalid': errormessage.packagedescription}"
+                   placeholder="Package Description"></textarea>
+                   <span class="errormessage">{{errormessage.packagedescription}}</span>
+                  </div>
+
+
+
+                <div class="detailsblock">
+                <label for="packageprice" class="label">
+                Package Price (Naira)
+                </label>
+                <input type="number" class="details" id="packageprice" name="packageprice"
+                formControlName ="packageprice" [ngClass]="{'invalid': errormessage.packageprice}">
+
+                <span class ="errormessage">{{errormessage.packageprice}}</span>
+                </div>
+
+                <div id="featuresandtags">
+                <div id="addfeatures" (click)= addfeatureses(); class="plusbutton"> + </div>
+                <div class="detailsblock" formArrayName ="featureses"
+                *ngFor="let feature of featureses.controls; let i = index"
+                >
+                  <div class="detailsblock" [formGroupName] = "i">
+                    <div class="detailsblock">
+                      <label class="label"  for="featurrr">Feature and Tags</label>
+
+                      <input class="details" type ="text" id="featurrr"  formControlName="features"
+                      [ngClass]="{'invalid': errormessage.features}"
+                      placeholder="Features and Tags"
+                      >
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+
+            <div class="uploadpicture" id="passportupload" class="detailsblock">
+              <div class="detailsblock">
+                <label for="pictureserviceimages">Upload Images for Your Service</label>
+
+                <input class = "details noborder"type ="file" id="pictureserviceimages" name="avatar" formenctype="multipart/form-data"  multiple>
+
+                <div class="uploadpicture">
+                  <button onclick="uploading('serviceimages');" class="button">upload image</button>
+                  </div>
+                <div class="loading"id="loadingserviceimages">
+                  <div class="filling" id="fillingserviceimages"> </div>
+                </div>
+                <div style="display:none" id="uploadserviceimagesmessage">
+                  </div>
+                  <div style="" id="uploadserviceimageserrormessage">
+                    </div>
+                </div>
+
+
+            </div>
+
+
+                <div class="submitdiv">
+                  <input type ="submit" class="button" [title]="!registerform.valid?'Fill all fields':''" (click)="save();" id="submit" [disabled]="!registerform.valid" value="Submit" id="submit">
+
+                </div>
+
+
+
+
+
+
+              </div>
+            </form>
+
+
+      </div>

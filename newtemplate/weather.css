@@ -1,0 +1,121 @@
+body{
+  color: white;
+}
+
+.entirepage{
+  position:absolute;
+  left:0px;
+  top:0px;
+  margin:0;
+  width: 100vw;
+  height: 100vh;
+  z-index:-1;
+  overflow:hidden;
+}
+.entirepage img{
+  min-width:100vw;
+  height: 100vh;
+  position: absolute;
+
+}
+.togglesearch{
+  float:left;
+  margin-top:10px;
+
+}
+.togglesearch img{
+  width: 20px;
+  height: 20px;
+}
+.searcharea{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:97vw;
+  margin:auto;
+  margin-top: 10px;
+}
+.searcharea label{
+  width:60px;
+  font-size: 12px;
+
+}
+.searcharea input, .searcharea select{
+  width: 100px;
+  outline:0;
+  border: 1px solid blue;
+  height: 25px;
+  margin-right: 5px;
+}
+.searcharea button{
+  outline: 0; border: 1px solid blue;
+  border-radius: 10px; width: 60px; padding: 5px;
+}
+.city{
+  position: absolute;
+  top: 25vh;
+  font-size: 35px;
+left: 20px;
+}
+.date{
+  position: absolute;
+  top: 25vh;
+  margin-top: 45px;
+  font-size: 18px;
+  left: 20px;
+}
+.bottomhr{
+  position: absolute;
+  bottom: 0px;
+  width: 90vw;
+  margin: auto;
+  overflow-x: scroll;
+
+  padding-top: 30px;
+    padding-bottom: 50px;
+  border-top: 2px solid white;
+  left:4vw;
+
+}
+.solong{
+  width: max-content;
+}
+.floatdiv{
+  float: left;
+  width: 98px;
+  margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+
+
+}
+.element {
+  margin-bottom: 10px;
+}
+.measurement, .unit{
+  margin-bottom: 5px;
+}
+.meter{
+  border-radius: 4px;
+
+  background-color: #bbb;
+  margin-top: 10px;
+  width: 70%;
+}
+.shadedmeter{
+  border-radius: 4px;
+  padding:3px;
+  background-color: white;
+
+  width: 25%;
+
+}
+@media only screen and (min-width:1000px) {
+
+  .searcharea{
+    justify-content: center;
+  }
+.bottomhr{
+  overflow:hidden;
+}
+}

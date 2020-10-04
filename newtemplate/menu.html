@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <style>
+
+        </style>
+
+
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cantarell" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cantarell" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT Sans" rel="stylesheet">
+
+
+
+<script src="jquery.js"></script>
+        <link href="menu.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+
+    <body>
+      <div class="menubutton" onclick="expanddropdown();">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+
+      </div>
+      <div class="dropdownwrapper">
+        <div class="logoandclose">
+
+          <div class="logo">
+          <div class="logoandword">
+              <img src="card.jpg">
+
+          <div class="logoword"> Otunba POS</div>
+          </div>
+          </div>
+          <div class="close">
+            <i class="fas fa-times" onclick="closedropdown()"></i>
+          </div>
+        </div>
+        <div class="dropdownsection">
+          <div class="section">
+            <div class="sectionheader">
+              <div class="sectionnameandicon" onclick="expanding();">
+                <div class="sectionname">
+                  User Requests
+                </div>
+                <div class="arrowicon">
+                  <i class="fas fa-angle-right" > </i>
+
+                </div>
+              </div>
+              <div class="listsectioncontent">Reg. Approval, profile change approval,
+              </div>
+            </div>
+            <div class="sectioncontent">
+              <ul>
+                <li>
+                  <a href="#">
+                    <div class="contenticon">
+
+                    </div>
+                    <div class="contentname">
+                      User Registration Approval
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="contenticon">
+
+                    </div>
+                    <div class="contentname">
+                      Profile Change Approval
+                    </div>
+                  </a>
+                </li>
+              <ul>
+
+            </div>
+
+          </div>
+          <div class="section">
+            <div class="sectionheader">
+              <div class="sectionnameandicon" onclick="expanding();">
+                <div class="sectionname">
+                  User Requests
+                </div>
+                <div class="arrowicon">
+                  <i class="fas fa-angle-right" > </i>
+
+                </div>
+              </div>
+              <div class="listsectioncontent">Registration. Approval, profile change approval,
+              </div>
+            </div>
+            <div class="sectioncontent">
+              <ul>
+                <li>
+                  <a href="#">
+                    <div class="contenticon">
+
+                    </div>
+                    <div class="contentname">
+                      User Registration Approval
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="contenticon">
+
+                    </div>
+                    <div class="contentname">
+                      Profile Change Approval
+                    </div>
+                  </a>
+                </li>
+              <ul>
+
+            </div>
+
+          </div>
+          <div class="section">
+            <div class="sectionheader">
+              <div class="sectionnameandicon">
+                <div class="sectionname">
+                </div>
+                <div class="arrowicon">
+                </div>
+              </div>
+              <div class="listsectioncontent">
+              </div>
+            </div>
+            <div class="sectioncontent">
+              <ul>
+                <li>
+                  <a href="#">
+                    <div class="contenticon">
+                    </div>
+                    <div class="contentname">
+                    </div>
+                  </a>
+                </li>
+              <ul>
+
+            </div>
+
+          </div>
+          <div class="section">
+            <div class="sectionheader">
+              <div class="sectionnameandicon">
+                <div class="sectionname">
+                </div>
+                <div class="arrowicon">
+                </div>
+              </div>
+              <div class="listsectioncontent">
+              </div>
+            </div>
+            <div class="sectioncontent">
+              <ul>
+                <li>
+                  <a href="#">
+                    <div class="contenticon">
+                    </div>
+                    <div class="contentname">
+                    </div>
+                  </a>
+                </li>
+              <ul>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <script>
+      const  closedropdown = ()=>{
+        //let dropdownclass = document.getElementsByClassName('dropdownwrapper')[0].className.includes('display');
+        //if(dropdownclass){dropdown = document.getElementsByClassName('dropdown')[0];
+    //    dropdown.className = dropdown.className.replace(/\bdisplay\b/g, "nodisplay");
+$('.dropdownwrapper').toggleClass('dropdowndisplay');
+
+      //}else{
+
+        //}
+        //$('.dropdownwrapper').toggleClass('display');
+      }
+      const expanddropdown = ()=>{
+        $('.dropdownwrapper').toggleClass('dropdowndisplay');
+      }
+      const expanding = () =>{
+        $('.sectioncontent').toggleClass('display');
+      }
+      a = $('.listsectioncontent')
+for(i=0; i<a.length; i++){
+  console.log(a[i]);
+      z= a[i].firstChild.data.toString();
+        console.log(z);
+      b= z.length;
+      console.log(b);
+      if(b>10){
+        c = z.substring(20, b);
+        console.log(c);
+        d = z.replace(c, "...");
+        console.log(d);
+        $('.listsectioncontent')[i].firstChild.data=d;
+
+      }}
+      </script>
+
+    </body>
+  </html>

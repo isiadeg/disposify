@@ -1,0 +1,377 @@
+body{
+  margin: 0;
+  padding: 0;
+  outline:0;
+}
+.indexwrapper{
+  background-image: url(/assets/bg.jpg);
+  margin-top: 0px;
+  width:100vw;
+  font-family: "Dosis", sans-serif;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  /* TO Change to flex start in reg form*/
+  align-items: flex-start;
+  /* */
+
+  /* to change */
+min-height: 100vh;
+overflow: hidden;
+}
+.loginwrapper{
+  margin-top: 64px;
+  /*border: 2px solid green;*/
+  background-color: transparent;
+  height: fit-content;
+  box-shadow: -2px 3px 5px 2px rgb(3 22 37);
+
+
+}
+.noborder {
+    border-bottom: 2px solid white;
+}
+.invalid{
+  border-bottom: 2px solid red;
+}
+.errormessage{
+  color:red;
+  display:block;
+}
+.invalid{
+  border: 1px solid red;
+}
+.loginheader{
+  background-color: green;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+.loginbody{
+  display: flex;
+
+  justify-content: center;
+  margin-top: 15px;
+  padding:0px 20px;
+}
+.input{
+  margin-bottom: 19px;
+
+}
+.input input, .input select{
+  width: 200px;
+  margin-left: 15px;
+  font-size: 16px;
+  padding: 7px;
+  padding-left: 50px;
+  background-image: url(/assets/searchicon.png);
+  background-position: 10px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border:  1px solid #73ec05;
+  border-radius: 20px;
+  font-family: "Dosis", sans-serif;
+  color:  #73ec05;
+}
+.input input:focus{
+  outline: 0;
+  border: 1px solid #c7faa7;
+
+}
+
+.input label{
+  margin-right: 20px;
+    color: #a6ca17;
+    display: block;
+    margin-bottom: 8px;
+    margin-left: 15px;
+      text-align: center;
+          font-weight:bold;
+
+}
+.submit{
+  background-image: url();
+  width:100px;
+  background-color: #164a45;
+    border: none;
+    padding-left: 5px;
+
+}
+.orregister{
+  margin-left: 50px;
+    color: #a6ca17;
+}
+.orregister a{
+  color: #a6ca17;
+}
+.nav{
+  position: absolute;
+  top:0px;
+  left: 0px;
+  background-color: transparent;
+  z-index: 100;
+
+}
+.nav ul{
+  margin:0px;
+  padding: 0px;
+}
+.nav ul li{
+  display: inline-block;
+    /* margin-left: 30px; */
+    padding: 10px;
+    margin-top: 10px;
+    padding-top: 0;
+    border-right: 2px solid #164a45;
+    /* border-left: 2px solid #164a45;*/
+
+}
+.nav ul li a{
+   color:#73ec19;
+   font-weight: bold;
+   text-decoration: none;
+   font-size: 18px;
+}
+.uploadpicture{
+  display: flex;
+  justify-content: center;
+}
+/*.uploadpicture button{
+  background-color: #164a45;
+    color: #8db11a;
+    margin-top: 10px;
+    outline: 0;
+    border: 0;
+    border-radius: 30px;
+    padding: 9px;
+}*/
+.loading{
+  display: none;
+  height: 30px;
+  width: 100%;
+}
+.uploadblurr{
+  background-color: #73ec19;
+  opacity: 0.8;
+
+}
+
+.filling{
+  height: 20%;
+  background-color: blue;
+}
+.profilewrapper{
+  margin: 0;
+  margin-top: 60px;
+  width: 100%;
+  background-color: white;
+
+
+}
+.profileheader{
+  width:95%;
+  padding:0;
+  overflow-x:scroll;
+  box-sizing: border-box;
+  margin:auto;
+
+}
+.navlong{
+    width: 1000px;
+    box-sizing: border-box;
+    border-bottom: 3px solid green;
+    height:40px;
+    box-sizing: border-box;
+}
+.navlong ul{
+  padding: 0;
+  padding-left: 20px;
+  list-style-type: none;
+  margin:0;
+}
+#uploadpas {
+    border-bottom: none;
+}
+.navlong ul li{
+  display: inline-block;
+box-sizing: border-box;
+  margin-top:-1px;
+  margin-right: 50px;
+  border:none;
+  border-bottom:1px solid #008000;
+height: 40px;
+}
+.navlong ul li.active{height: 40px;
+    border-bottom: 3px solid #1ce017;
+
+}
+.navlong ul li a{
+  color: #008000;
+  text-decoration: none;
+  font-weight:bold;
+  	font-family: 'Dosis', sans-serif;
+    font-weight:600;
+  	letter-spacing: 0.6px;
+  	line-height: 16px;
+}
+img{
+  width: 100px;
+  height: 100px;
+}
+.bodywrapper{
+width:95%;
+margin:auto;
+margin-top:20px;
+display: flex;
+flex-direction:column;
+align-items: center;
+
+}
+.picture img{
+  border-radius:50%;
+z-index: 1;
+  width:100px;
+  display: block;
+/*margin-top: -50px;*/
+
+}
+.picture, .detailsblock{
+  width: 100%;
+
+  box-sizing: border-box;
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.picture{
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height:120px;
+  /*margin-bottom: 30px */
+}
+.detailsblock{
+    padding-left: 15px;
+    margin-bottom: 20px;
+    /* border-radius: 5px; */
+    box-shadow: 2px 2px 4px 0px rgb(222 220 220);
+
+    justify-content: center;
+}
+.label, .details{
+  width:100%;
+}
+.label{
+  font-weight:bold;
+  margin-bottom: 10px;
+  color: #333;
+  font-family: 'Hind', sans-serif;
+	line-height: 21px;
+}
+.details{
+  color: green;
+  	font-family: 'Hind', sans-serif;
+    font-size:14px;
+}
+.detailsblock input, .detailsblock select{
+  width: 282px;
+    border: none;
+    border-bottom: 2px solid green;
+    padding:0;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+.detailsblock input:focus{
+outline:0;
+font-size:18px;
+}
+.filecenter{
+  margin-top:50px;
+  background-color: transparent;
+  padding-left: 50px;
+  z-index:2;
+  color:green;
+
+}
+.button{
+  outline: 0;
+  border:0;
+  border-radius: 20px;
+  background-color: green;
+  color: white;
+  padding: 10px;
+  padding-right:20px;
+  padding-left: 20px;
+  font-size: 14px;
+;
+}
+.submitdiv{
+  display:flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+@media only screen and (min-width:1000px){
+.profileheader{
+overflow-x:hidden;
+
+}
+.navlong{
+    width: 100%;
+}
+.bodywrapper{
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content: space-between;
+
+}
+.picture, .detailsblock{
+  width: 270px;
+    height:120px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.detailsblock{
+box-shadow: none;
+
+}
+.label, .details{
+  width:220px;
+}
+.detailsblock input{
+width:245px;
+
+}
+
+
+  .input label{
+    display: inline-block;
+    margin-bottom: 0px;
+    margin-left:0;
+    text-align: left;
+    width: 130px;
+  }
+  .loginwrapper{
+    margin-top: 64px;
+  }
+  .input{
+    margin-bottom: 30px;
+  }
+  .indexwrapper{
+    /* TO Change to flex start in reg form*/
+    align-items: flex-start;
+    /* */
+
+  }
+  .errormessage{
+    color:red;
+    display:inline;
+  }
+}

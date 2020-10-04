@@ -1,0 +1,37 @@
+{
+"name" :"Functions News",
+"theme-color": "#385770",
+"background-color":"#18481d",
+"display": "standalone",
+"orientation" : "portrait",
+"scope":"/",
+"start_url": "/index.html",
+"icons":[{
+  "src":"/assets/icon4848.png",
+  "sizes":"48x48",
+  "type":"image/png"
+},{
+  "src":"/assets/icon128128.png",
+  "sizes":"128x128",
+  "type":"image/png"
+},{
+  "src":"/assets/icon9696.png",
+  "sizes":"96x96",
+  "type":"image/png"
+
+},
+{
+  "src":"/assets/icon144144.png",
+  "sizes":"144x144",
+  "type":"image/png"
+
+}
+
+
+],
+"short_name": "News"
+
+
+
+
+}

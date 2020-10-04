@@ -1,0 +1,61 @@
+body{
+
+font-size: 100%;
+margin: 0;
+padding:0;
+outline: 0;
+
+}
+header{
+margin: 0;
+padding:0;
+outline: 0;
+
+height: 55px;
+width: 100%;
+overflow: hidden;
+background-color:white;
+	box-shadow: 0px -6px 12px 3px rgb(144, 140, 140);
+
+}
+#menu, #logo{
+	float: left;
+}
+ #search-area{
+	float: right;
+}
+#logo {
+	padding : 10px;
+}
+#logo img{
+	width: 40px;
+	height: 40px;
+}
+#menu-button{
+	outline:0;
+	border: 0px;
+	margin: 10px;
+	padding: 5px;
+	height: 30px;
+	width: 20px;
+	background-color: transparent;
+}
+.bar{
+	padding: 1.55px;
+	margin: 3px;
+	background-color: black;
+	width: 16px;
+	display:block;
+}
+.active{
+	color: red;
+}
+@media only screen and (min-width: 1024px){
+	#menu-button{
+		display: none;
+	}
+	
+	
+}
+
+

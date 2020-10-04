@@ -1,0 +1,212 @@
+
+
+      <div class="profilewrapper">
+
+
+
+
+
+          <div class="loginheader">
+            Register Your Business
+            </div>
+
+              <form novalidate [formGroup]="registerform" >
+                <div class="bodywrapper">
+
+
+
+                <div class="detailsblock">
+                  <label class="label"  for="companyname">Company Name</label>
+                  <input class="details" type ="text" id="companyname"  formControlName="companyname"
+                  [ngClass]="{'invalid': errormessage.companyname}"
+                  placeholder="Company Name"
+                  >
+                  <span class="errormessage">{{errormessage.companyname}}</span>
+                </div>
+
+
+                <div class="detailsblock">
+                <label for="companyaddress" class="label">
+                Company Address
+                </label>
+                <input type="text" class="details" id="companyaddress" name="address"
+                formControlName ="companyaddress" [ngClass]="{'invalid': errormessage.companyaddress}">
+
+                <span class ="errormessage">{{errormessage.companyaddress}}</span>
+                </div>
+
+
+
+                                      <div class="detailsblock">
+                                      <label for="phonenumber" class="label">
+                                      Business Phone Number
+                                      </label>
+                                      <input type="text" class="details" id="phonenumber" name="phonenumber"
+                                      formControlName ="phonenumber" [ngClass]="{'invalid': errormessage.phonenumber}">
+
+                                      <span class ="errormessage">{{errormessage.phonenumber}}</span>
+                                      </div>
+
+                <div class="detailsblock">
+                  <label class="label"  for="email">Business Email</label>
+                  <input class = "details"type ="email" id="email" formControlName="email"
+                  [ngClass]="{'invalid': errormessage.email}"
+                  placeholder="email"
+                  >
+                  <span class="errormessage">{{errormessage.email}}</span>
+                </div>
+
+                <div class="detailsblock">
+                   <label for="wh_mon_fri_start">Working Hours(Monday - Friday)</label>
+                   From  <input class="details" type ="time" id="wh_mon_fri_start" name="wh_mon_fri_start"
+                   formControlName = "wh_mon_fri_start"
+                   > To  <input class="details" type ="time" id="wh_mon_fri_end" name="wh_mon_fri_end"
+                   formControlName = "wh_mon_fri_end" >
+                   <span class="errormessage" id="wh_mon_frierror">{{errormessage.wh_mon_fri_start}}</span>
+                 </div>
+
+                 <div class="detailsblock">
+                    <label for="wh_sat_start">Working Hours(Saturday)</label>
+                    From  <input class="details" type ="time" id="wh_mon_fri_start" name="wh_sat_start"
+                    formControlName = "wh_sat_start"
+                    > To  <input class="details" type ="time" id="wh_mon_fri_end" name="wh_mon_fri_end"
+                    formControlName = "wh_sat_end" >
+                                  </div>
+
+                                  <div class="detailsblock">
+                                     <label for="wh_sun_start">Working Hours(Sunday)</label>
+                                     From  <input class="details" type ="time" id="wh_sun_start" name="wh_mon_fri_start"
+                                     formControlName = "wh_sun_start"
+                                     > To  <input class="details" type ="time" id="wh_sun_end" name="wh_mon_fri_end"
+                                     formControlName = "wh_sun_end" >
+                                                   </div>
+
+                                                   <div class="detailsblock">
+                                                      <label for="servicedescription">Service Description</label>
+                                                      <textarea name="name" formControlName="servicedescription"></textarea>
+                                                                    </div>
+
+
+
+
+
+            <div class="uploadpicture" id="passportupload" class="detailsblock">
+              <div class="detailsblock">
+                <label for="picturecertificate">Upload Your Business Certificate</label>
+
+                <input class = "details noborder"type ="file" id="picturecertificate" name="avatar" formenctype="multipart/form-data" >
+
+                <div class="uploadpicture">
+                  <button onclick="uploading('certificate');" class="button">upload certificate</button>
+                  </div>
+                <div class="loading"id="loadingcertificate">
+                  <div class="filling" id="fillingcertificate"> </div>
+                </div>
+                <div style="display:none" id="uploadcertificatemessage">
+                  </div>
+                  <div style="" id="uploadcertificateerrormessage">
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="uploadpicture" id="passportupload" class="detailsblock">
+              <div class="detailsblock">
+                <label for="picturepassport">Upload Your Business Logo or Image </label>
+
+                <input class = "details noborder"type ="file" id="picturepassport" name="avatar" formenctype="multipart/form-data" >
+
+                <div class="uploadpicture">
+                  <button onclick="uploading('passport');" class="button">upload Logo</button>
+                  </div>
+                <div class="loading"id="loadingpassport">
+                  <div class="filling" id="fillingpassport"> </div>
+                </div>
+                <div style="display:none" id="uploadpassportmessage">
+                  </div>
+                  <div style="" id="uploadpassporterrormessage">
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <!-- <div class="uploadpicture" id="passportupload" class="detailsblock">
+              <div class="input">
+                <label for="pictureupload">Upload a passport photograph</label>
+
+                <input type ="file" id="picturepassport" name="avatar" formenctype="multipart/form-data" >
+
+                <div class="uploadpicture">
+                  <button onclick="uploading('passport');">upload picture</button>
+                  </div>
+                <div class="loading"id="loadingpassport">
+                  <div class="filling" id="fillingpassport"> </div>
+                </div>
+                <div style="display:none" id="uploadpassportmessage">
+                  </div>
+                  <div style="" id="uploadpassporterrormessage">
+                    </div>
+                </div>
+
+
+            </div> -->
+
+
+            <div class="uploadpicture" id="idcardupload" class="detailsblock">
+              <div class="detailsblock">
+                <label for="pictureidcard">Upload Your Sales Representative I.D. card </label>
+
+                <input class = "details noborder"type ="file" id="pictureidcard" name="avatar" formenctype="multipart/form-data" >
+
+                <div class="uploadpicture">
+                  <button onclick="uploading('idcard');" class="button">upload I.D. Card</button>
+                  </div>
+                <div class="loading"id="loadingidcard">
+                  <div class="filling" id="fillingidcard"> </div>
+                </div>
+                <div style="display:none" id="uploadidcardmessage">
+                  </div>
+                  <div style="" id="uploadidcarderrormessage">
+                    </div>
+                </div>
+
+
+            </div>
+
+      <!-- <div class="uploadidcard" id="idcardupload">
+            <div class="detailsblock">
+              <label class="label"  for="uploadidcard">Upload Representative I.D. card</label>
+              <input class = "details"type ="file" id="pictureidcard" name="idcard" formenctype="multipart/form-data" >
+              <div class="uploadpicture">
+                <button onclick="uploading('idcard');">upload I.D.Card</button>
+                </div>
+              <div class="loading" id="loadingidcard">
+                <div class="filling" id="fillingidcard">
+                </div>
+              </div>
+              <div style="display:none;" id="uploadidcardmessage">
+                </div>
+                <div  id="uploadidcarderrormessage">
+                  </div>
+            </div>
+
+          </div> -->
+
+                <div class="submitdiv">
+                  <input type ="submit" class="button" [title]="!registerform.valid?'Fill all fields':''" (click)="save();" id="submit" [disabled]="!registerform.valid" value="Submit" id="submit">
+
+                </div>
+
+
+
+
+
+
+              </div>
+            </form>
+
+
+      </div>

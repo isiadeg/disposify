@@ -1,0 +1,56 @@
+.routerwrapper{
+  display:flex;
+  flex-direction: column;
+
+}
+.stackwrapper{
+        display: flex;
+        flex-direction:row;
+        width: max-content;
+        padding: 10px;
+        font-family: "Hind", sans-serif;
+
+        }
+        .stackblock{
+          width: max-content;
+    height: max-content;
+    background-color: green;
+    color: white;
+
+      border-right: 2px solid rgb(144, 140, 140);
+    font-size: 17px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 6px 6px 12px 3px rgb(144, 140, 140);
+
+        }
+        a:link, a:hover, a:visited{
+          color:white;
+          text-decoration: none;
+
+        }
+        .active .stackblock{
+          color: green;
+          background-color: white;
+          border-right: none;
+        }
+        @media only screen and (min-width: 1024px){
+          .stackwrapper{
+          flex-direction:column;}
+
+
+
+      .stackblock{
+        border-bottom: 2px solid rgb(144, 140, 140);
+        width:200px;
+        height:max-content;
+}
+.routerwrapper{
+  display:flex;
+  flex-direction: row;
+  width:max-content;
+
+}
+    }

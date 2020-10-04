@@ -1,0 +1,45 @@
+<div class="routewrapper">
+  <div class="routerheader">
+    Vendor Section
+  </div>
+  <div class ="navwrapper">
+    <div class="navdetails">
+    <ul>
+      <li>
+        <a [routerLink]="['/admin', 'user', uid, 'userdetails']" routerLinkActive ="active">
+          User Details
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/admin', 'user', uid, uid, 'moneyallocated', uid]" routerLinkActive ="active">
+          Allocate Money
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/admin', 'user', uid, uid, 'moneyremmited']" routerLinkActive ="active">
+          Enter Amount Remitted
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/admin', 'user', uid, 'dailytransaction', uid]" routerLinkActive ="active">
+          Daily transactions
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/admin', 'user', uid, 'transactions', uid]" routerLinkActive ="active">
+          Transactions
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/user', uid]" routerLinkActive ="active">
+          Go To User's Page
+        </a>
+      </li>
+    </ul>
+    </div>
+    <div class="rightback">
+      Go Back To Vendors
+    </div>
+  </div>
+  <router-outlet> </router-outlet>
+  </div>

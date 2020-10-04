@@ -1,0 +1,248 @@
+.menubutton{
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  height: 30px;
+  	width: 20px;
+    background-color: transparent;
+    cursor:pointer;
+    z-index: 100;
+}
+.bar{
+  display: block;
+  padding: 1.55px;
+  margin: 3px;
+	background-color: black;
+	width: 16px;
+}
+.dropdownwrapper{
+  width: 250px;
+  position: fixed;
+  z-index: 101;
+  color: green;
+  top: 0px;
+  left: 0px;
+  overflow-y: scroll;
+  background-color: white;
+
+  height: 100vh;
+/*  background-image: url(/assets/posbackground.png);*/
+  background-size: cover;
+
+
+}
+.picture, .detailsblock{
+  width: 100%;
+
+  box-sizing: border-box;
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.picture{
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height:120px;
+  /*margin-bottom: 30px */
+}
+.detailsblock{
+    padding-left: 15px;
+    margin-bottom: 20px;
+    /* border-radius: 5px; */
+    box-shadow: 2px 2px 4px 0px rgb(222 220 220);
+
+    justify-content: center;
+}
+.infoheader{
+  font-family: "Hind", sans-serif;
+  line-height: 21px;
+  font-size: 18px;
+  font-weight: bold;
+  color:green;
+  margin: 20px;
+
+}
+.infodetails{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  margin: 0px 20px 10px;
+
+
+}
+.dropdownsection{
+height:150vh;
+}
+.adminwrapper{width:97%;
+  margin:auto;
+  margin-top:40px;
+overflow-x: scroll;}
+.shift{margin-left: 10px;}
+.dropdownwrapper::-webkit-scrollbar {
+  width: 8px;
+  background-color: white;
+
+}
+
+/* Track */
+.dropdownwrapper::-webkit-scrollbar-track {
+
+
+}
+
+/* Handle */
+.dropdownwrapper::-webkit-scrollbar-thumb {
+ background-color: #dedcdc;
+ border: 2px solid #ffffff;
+ border-radius: 8px;
+}
+.logoword, .logoandword img{
+  margin-right: 10px;
+}
+.listsectioncontent{
+  color: #74828e;
+  font-family: 'Hind', sans-serif;
+  font-size: 13px;
+    line-height: 21px;
+    font-weight: bold;
+}
+.sectioncontent ul{
+  list-style-type: none;
+    font-family: 'Hind', sans-serif;
+    line-height: 23px;
+
+    padding: 0;
+}
+.sectioncontent li{
+  margin-bottom: 10px;
+}
+.sectioncontent li a {
+    text-decoration: none;
+    color: green;
+}
+.logoandword{
+display: flex;
+align-items: center;
+}
+.logoandclose{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logoandclose,.section{
+  margin-bottom: 0;
+
+  padding: 20px 25px;
+    padding-right: 24px;
+    box-shadow: 2px 2px 4px 0px #dedcdc;
+    border-bottom: 1px solid #ffffff;
+}
+.logoandclose .logo img{
+  width: 20px;
+  height: 20px;
+
+}
+.logoandclose .logo{
+  float: left;
+}
+.logoandclose .close{
+  float: right;
+}
+
+.dropdownwrapper{
+  display:none;
+}
+.dropdowndisplay{
+  display: block;
+}
+.sectionnameandicon{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.sectioncontent{
+  display: none;
+}
+.display{
+  display:block;
+}
+.sectionheader{
+  height: 40px;
+}
+.sectionname{
+  font-family: 'Hind', sans-serif;
+	line-height: 21px;
+  font-size: 14px;
+}
+table tr:nth-child(even){
+  background-color: #f3f4f5;
+
+}
+ table tr:nth-child(odd){
+  background-color: white;
+
+}
+table, th, td{
+  border-collapse: collapse;
+  border: 1px solid #f3f4f5;
+  color: #333;
+  padding:15px;
+}
+table{
+  min-width: 70vw;
+}
+table img{
+  width: 50px;
+  height: 50px;
+}
+.plusbutton{
+  border-radius: 50%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 40px;
+    left: 80vw;
+    font-weight: bold;
+    font-size: 18px;
+    top: 80vh;
+    background-color: blue;
+    color: white;
+    box-shadow: -1px 2px 4px 1px rgb(183 193 204);
+
+}
+
+@media only screen and (min-width:1000px ){
+
+.dropdownwrapper{
+  display:block;
+  box-shadow: 2px 2px 4px 0px #dedcdc;
+}
+.dropdowndisplay{
+  display: none;
+}
+.adminwrapper{width:70%;
+overflow-x: scroll;
+margin-left: 270px;}
+.shift{margin-left: auto;
+width:98%;
+
+}
+.picture, .detailsblock{
+  width: 270px;
+    /*height:120px;*/
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.detailsblock{
+/*box-shadow: none;*/
+
+}
+
+}
