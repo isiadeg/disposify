@@ -79,15 +79,18 @@ th, td{
 
 <app-root></app-root>
 <script src="/assets/jquery.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
-   https://firebase.google.com/docs/web/setup#available-libraries  -->
-<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-storage.js"></script><!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-storage.js"></script><!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -96,27 +99,24 @@ th, td{
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 
 <script>
+var firebaseConfig = {
+  apiKey: "AIzaSyBf3df7kFCwyxaHbcjiGwQ2p-wsXxL3TaM",
+  authDomain: "omolayointcollege.firebaseapp.com",
+  databaseURL: "https://omolayointcollege.firebaseio.com",
+  projectId: "omolayointcollege",
+  storageBucket: "omolayointcollege.appspot.com",
+  messagingSenderId: "850634502963",
+  appId: "1:850634502963:web:73ef0d73c50ea76a55c446",
+  measurementId: "G-1C4GFK7FCK"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+
 
 <!--  The core Firebase JS SDK is always required and must be listed first -->
 
   // Your web app's Firebase configuration
-  var firebaseConfig = {
-      apiKey: "AIzaSyCxO-zbB4Kxr-xysON9p0WSZyuxIgsnOdw",
-      authDomain: "sdgdisposify.firebaseapp.com",
-      databaseURL: "https://sdgdisposify.firebaseio.com",
-      projectId: "sdgdisposify",
-      storageBucket: "sdgdisposify.appspot.com",
-      messagingSenderId: "467862733031",
-      appId: "1:467862733031:web:58d66e84047d1339606242",
-      measurementId: "G-C7P2DGENT2"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-
-
-
-
 
     displaysmall=()=>{
       $('.togglesearch').toggleClass("togglesearch");

@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="detailsblock">
-                   <label for="packagedescription">Package Description</label>
+                   <label  class="label" for="packagedescription">Package Description</label>
                    <textarea name="packagedescription" formControlName="packagedescription"
                    [ngClass]="{'invalid': errormessage.packagedescription}"
                    placeholder="Package Description"></textarea>
@@ -35,11 +35,11 @@
 
 
                 <div class="detailsblock">
-                <label for="packageprice" class="label">
+                <label  class="label" for="packageprice" class="label">
                 Package Price (Naira)
                 </label>
                 <input type="number" class="details" id="packageprice" name="packageprice"
-                formControlName ="packageprice" [ngClass]="{'invalid': errormessage.packageprice}">
+                formControlName ="packageprice" [ngClass]="{'invalid': errormessage.packageprice}" placeholder="Price in Naira">
 
                 <span class ="errormessage">{{errormessage.packageprice}}</span>
                 </div>
